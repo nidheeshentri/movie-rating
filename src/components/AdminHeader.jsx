@@ -2,21 +2,20 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
 
-const UserHeader = () => {
+const AdminHeader = () => {
   return (
     <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-            <Navbar.Brand href="/">Navbar</Navbar.Brand>
+            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
             <Nav className="me-auto">
-              <Link to="/">Home</Link>
-              <Link to="/ratings">Ratings</Link>
-              <Link to="/contact">Contact</Link>
+            <Nav.Link href="#home">Add Movie</Nav.Link>
+            <Nav.Link href="#features">User list</Nav.Link>
+            <Nav.Link href="#pricing">Ratings</Nav.Link>
             </Nav>
         </Container>
     </Navbar>
   )
 }
 
-export default UserHeader
+export default AdminHeader
