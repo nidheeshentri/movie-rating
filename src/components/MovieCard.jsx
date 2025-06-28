@@ -27,7 +27,7 @@ const MovieCard = (props) => {
         const header = {
             "Authorization": `Bearer ${token}`
         }
-        axios.put("http://localhost:3000/movies-rating", {newRating: rating, id: props.movie._id}, {
+        axios.put("https://movie-rating-backend-xe3v.onrender.com/movies-rating", {newRating: rating, id: props.movie._id}, {
             headers: header
         })
         .then(res => {
@@ -48,7 +48,7 @@ const MovieCard = (props) => {
     }
 
     const deleteMovie = () => {
-        axios.delete("http://localhost:3000/movies-delete?id="+props.movie._id)
+        axios.delete("https://movie-rating-backend-xe3v.onrender.com/movies-delete?id="+props.movie._id)
         .then(res => {
             console.log(res.data)
             axios.get("http://127.0.0.1:3000/movies-list")

@@ -15,7 +15,7 @@ const Login = () => {
     
   const loginHandler = (event) => {
     event.preventDefault()
-    axios.post("http://localhost:3000/user/login", {
+    axios.post("https://movie-rating-backend-xe3v.onrender.com/user/login", {
       email: userData.email,
       password: userData.password
     })

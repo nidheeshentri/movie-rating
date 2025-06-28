@@ -58,7 +58,7 @@ const Homepage = () => {
     const addMovie = (event) => {
       event.preventDefault()
 
-      axios.post("http://localhost:3000/movies-create", newMovie)
+      axios.post("https://movie-rating-backend-xe3v.onrender.com/movies-create", newMovie)
       .then(res => {
         console.log(res.data)
         getMovies()

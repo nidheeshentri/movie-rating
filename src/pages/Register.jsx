@@ -13,7 +13,7 @@ const Register = () => {
 
   const registerHandler = (event) => {
     event.preventDefault()
-    axios.post("http://localhost:3000/user/register", {
+    axios.post("https://movie-rating-backend-xe3v.onrender.com/user/register", {
       email: userData.email,
       password: userData.password
     })
