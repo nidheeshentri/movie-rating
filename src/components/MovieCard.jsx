@@ -32,7 +32,7 @@ const MovieCard = (props) => {
         })
         .then(res => {
             console.log(res.data)
-            axios("http://127.0.0.1:3000/movies-list")
+            axios("https://movie-rating-backend-xe3v.onrender.com/movies-list")
             .then((res) => {
                 dispatch(getMoviesData(res.data))
                 handleClose()
@@ -51,7 +51,7 @@ const MovieCard = (props) => {
         axios.delete("https://movie-rating-backend-xe3v.onrender.com/movies-delete?id="+props.movie._id)
         .then(res => {
             console.log(res.data)
-            axios.get("http://127.0.0.1:3000/movies-list")
+            axios.get("https://movie-rating-backend-xe3v.onrender.com/movies-list")
             .then((res) => {
                 dispatch(getMoviesData(res.data))
             })

@@ -28,7 +28,7 @@ const Homepage = () => {
 
     function getMovies(){
       console.log("getMovies function")
-      axios("http://127.0.0.1:3000/movies-list")
+      axios("https://movie-rating-backend-xe3v.onrender.com/movies-list")
       .then((res) => {
         
         dispatch(getMoviesData(res.data))
