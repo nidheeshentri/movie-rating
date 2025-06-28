@@ -14,8 +14,11 @@ import AdminHeader from './components/AdminHeader';
 import UserRoot from './layouts/UserRoot';
 import AdminRoot from './layouts/AdminRoot';
 import Ratings from './pages/Ratings';
+
 import store from './app/store'
 import { Provider } from 'react-redux'
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -27,8 +30,12 @@ const router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: "contact",
-        element: <ContactPage />
+        path: "login",
+        element: <Login />
+      },
+      {
+        path: "register",
+        element: <Register />
       },
       {
         path: "movie-details/:id",
@@ -57,6 +64,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router = {router} />
+    <Provider store = {store}>
+      <RouterProvider router = {router} />
+    </Provider>
   </StrictMode>,
 )
